@@ -43,3 +43,10 @@ services:
     depends_on:
       - minitwitter-1
       - minitwitter-2
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:4000"
+    depends_on:
+      - load-balancer
