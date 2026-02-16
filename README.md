@@ -21,3 +21,8 @@ $env:DATABASE_URL="postgresql://postgres:supersecret123@localhost:5432/minitwitt
 bunx drizzle-kit studio
 
 
+powershell -c "irm bun.sh/install.ps1 | iex"
+
+
+
+
