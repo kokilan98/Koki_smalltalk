@@ -25,4 +25,8 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 
 
 
+http://localhost/auth/login
+http://localhost/posts
+
+
 

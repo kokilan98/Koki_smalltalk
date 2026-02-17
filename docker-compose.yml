@@ -19,6 +19,8 @@ services:
   minitwitter-1:
     build: .
     restart: always
+    ports:
+      - "3000:3000"
     environment:
       - DATABASE_URL=postgresql://postgres:supersecret123@postgres:5432/minitwitter
     depends_on:
@@ -28,6 +30,8 @@ services:
   minitwitter-2:
     build: .
     restart: always
+    ports:
+      - "3002:3000"
     environment:
       - DATABASE_URL=postgresql://postgres:supersecret123@postgres:5432/minitwitter
     depends_on:
@@ -40,13 +44,7 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./frontend:/usr/share/nginx/html:ro
     depends_on:
       - minitwitter-1
       - minitwitter-2
-
-  frontend:
-    build: ./frontend
-    ports:
-      - "3001:4000"
-    depends_on:
-      - load-balancer
