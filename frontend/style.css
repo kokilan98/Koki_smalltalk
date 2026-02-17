@@ -270,3 +270,9 @@ footer a {
   width: 100px;
   height: auto;
 }
+
+.showPasswordContainer {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

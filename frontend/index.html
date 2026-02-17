@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="/style.css?v=1">
-
     <!-- Only needed if you want the social icons to render -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 </head>
 
 <body>
@@ -25,6 +25,11 @@
                 <!--input type="email" placeholder="Email" /-->
                 <input id="signupPassword" type="password" placeholder="Password" />
                 <input id="signupConfirmPassword" type="password" placeholder="Confirm Password" />
+                <!-- An element to toggle between password visibility -->
+                <label style="display: flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 12px;">
+                    <input type="checkbox" onclick="showPasswordSignUp()">
+                    Show Password
+                </label>
                 <p id="signupMsg"></p>
                 <button>Sign Up</button>
             </form>
@@ -40,6 +45,10 @@
                 <!--span>or use your account</span-->
                 <input id="loginUsername" type="text" placeholder="Username" />
                 <input id="loginPassword" type="password" placeholder="Password" />
+                <label style="display: flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 12px;">
+                    <input type="checkbox" onclick="showPasswordSignIn()">
+                    Show Password
+                </label>
                 <a href="#">Forgot your password?</a>
                 <p id="loginMsg"></p>
                 <button>Sign In</button>

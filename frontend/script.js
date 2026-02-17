@@ -52,6 +52,28 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
   }
 });
 
+//Show password functions
+function showPasswordSignUp() {
+  var x = document.getElementById("signupPassword");
+  var y = document.getElementById("signupConfirmPassword");
+  if (x.type === "password" && y.type === "password") {
+    x.type = "text";
+    y.type = "text";
+  } else {
+    x.type = "password";
+    y.type = "password";
+  }
+} 
+
+function showPasswordSignIn() {
+  var x = document.getElementById("loginPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
 // LOGIN
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
