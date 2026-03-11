@@ -8,8 +8,6 @@ import authMiddleware from "./auth-middleware";
 export const initializeAPI = (app: Express) => {
     app.use(authMiddleware);
     app.use("/auth", authRoutes);
-
-    app.use("/auth", authRoutes);
     // GET all posts
     app.get("/posts", async (req: Request, res: Response) => {
         const posts = await db.select().from(postsTable);
